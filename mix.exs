@@ -5,7 +5,7 @@ defmodule Bugsnag.Mixfile do
     [
       app: :bugsnag,
       version: "0.1.0-dev",
-      elixir: ">= 0.14.3",
+      elixir: "~> 1.0.0",
       package: package,
       description: """
         An Elixir interface to the Bugsnag API
@@ -27,10 +27,7 @@ defmodule Bugsnag.Mixfile do
   end
 
   defp deps do
-    [
-      {:httpoison, "~> 0.3.0"},
-      {:hackney, "~> 0.13.0", github: "benoitc/hackney"},
-      {:jsex, "~> 2.0.0"}
-    ]
+    [ { :httpoison, "~> 0.5.0" },
+      { :jsex, "~> 2.0.0" } ]
   end
 end
